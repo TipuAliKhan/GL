@@ -2,6 +2,7 @@ $primary-color: #196ae5;
 $black: #48485e;
 $std-padding: 60px 20px;
 $breakpoint-tablet: 426px;
+$breakpoint-desktop: 768px;
 $font-family: "Fira Sans", sans-serif;
 
 * {
@@ -10,10 +11,15 @@ $font-family: "Fira Sans", sans-serif;
   font-family: sans-serif;
   color: $black;
   font-family: $font-family;
-  &:focus{
+  &:focus {
     border: none;
   }
 }
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
 h2.title {
   margin: 0 30px 40px;
   text-align: center;
@@ -40,6 +46,13 @@ h2.title {
   }
 }
 
+.container{
+  margin: 0 auto;
+  @media (min-width: $breakpoint-tablet) {
+    max-width: 80%;
+  }
+}
+
 #hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(./GL-task-assets/bg.jpg);
@@ -62,7 +75,16 @@ h2.title {
     flex-direction: column;
     padding: 40px 0 20px;
 
+    @media (min-width: 700px) {
+      flex-direction: row;
+      align-items: center;
+    justify-content: space-around;
+    }
+
     .content {
+      @media (min-width: 700px) {
+        order: 1;
+      }
       h1 {
         color: #ffffff;
         font-size: 24px;
@@ -91,10 +113,19 @@ h2.title {
 
     .form {
       padding-bottom: 40px;
+
+      @media (min-width: 700px) {
+        order: 2;
+      }
+
       form {
         background-color: #ffffff;
         border-radius: 8px;
-        padding: 16px;
+        padding: 14px;
+
+        @media (min-width: 700px) {
+          width: 310px;
+        }
 
         h2 {
           margin: 0 30px 40px;
@@ -104,7 +135,7 @@ h2.title {
           font-size: 24px;
           line-height: 34px;
           position: relative;
-        
+
           &::after {
             content: "";
             background-color: #1b1c1d;
@@ -115,7 +146,7 @@ h2.title {
             left: 50%;
             transform: translate(-50%, 0);
           }
-        
+
           @media (min-width: $breakpoint-tablet) {
             font-size: 34px;
             line-height: 48px;
@@ -141,6 +172,16 @@ h2.title {
         }
         .checkbox {
           margin-bottom: 10px;
+          position: relative;
+          height: 40px;
+
+          label {
+            position: absolute;
+            left: 22px;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 20px;
+          }
         }
         button {
           display: block;
@@ -163,8 +204,65 @@ h2.title {
 
   iframe {
     width: 100%;
-    height: auto;
+    height: 250px;
     margin-top: 28px;
+
+    @media (min-width: 500px) {
+      width: 400px;
+    }
+
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 600px;
+      height: 340px;
+    }
+  }
+
+  .icon {
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    margin: 40px auto 0;
+    max-width: 1200px;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: flex;
+    }
+    .list {
+      .icon-list {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        padding: 20px;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      p{
+        text-align: center;
+        margin-top: 10px;
+      }
+      .curriculum {
+        background-color: #f7d354;
+      }
+
+      .mentorship {
+        background-color: #42c5f1;
+      }
+
+      .assistance {
+        background-color: #3bab8e;
+      }
+    }
   }
 }
 
@@ -178,8 +276,7 @@ h2.title {
     margin-top: 50px;
 
     .accordion-panel {
-      margin: 2px;
-      padding: 5px;
+      padding: 10px;
       border-bottom: 1px solid #c2c5cb;
       &:last-child {
         border: none;
@@ -222,10 +319,18 @@ h2.title {
   }
   p {
     margin: 40px 0 20px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 26px;
   }
   .content {
+
+    @media (min-width: $breakpoint-desktop) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
     .img {
       img {
         width: 100%;
@@ -249,12 +354,13 @@ h2.title {
 
 #testimonial {
   padding: $std-padding;
-
+  padding-bottom: 180px;
   .testimonial-list {
     position: relative;
     width: 100%;
     height: 250px;
-    
+    margin-top: 60px;
+
     .slider {
       position: absolute;
       top: 50%;
@@ -265,22 +371,32 @@ h2.title {
       overflow: hidden;
       transform: translate(-50%, -50%);
 
-      @media (min-width: 700px) {
-        width: 50%;
-      }
+      // @media (min-width: 700px) {
+      //   width: 50%;
+      // }
 
       .slider__slide {
         display: none;
-        p{
-            font-size: 16px;
-            line-height: 26px;
-            padding-bottom: 20px;
+        p {
+          font-size: 16px;
+          line-height: 26px;
+          padding-bottom: 20px;
+
+          @media (min-width: $breakpoint-desktop) {
+            width: 90%;
+            padding-left: 60px; 
+          }
         }
 
-        h5{
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 26px;
+        h5 {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 26px;
+
+          @media (min-width: $breakpoint-desktop) {
+            text-align: right;
+            padding-right: 60px; 
+          }
         }
       }
 
@@ -296,16 +412,22 @@ h2.title {
       .slider__btn-next {
         display: none;
 
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-desktop) {
           display: inline-block;
           position: absolute;
           top: 50%;
           z-index: 1;
-          width: 100px;
+          width: 40px;
           height: 100px;
           border: none;
-          transform: translateY(-50%);
+          transform: translateY(-100%);
           background-color: transparent;
+          cursor: pointer;
+        }
+        img{
+          width: 30px;
+          height: auto;
+          object-fit: contain;
         }
       }
 
@@ -316,7 +438,7 @@ h2.title {
       .slider__btn-next {
         right: 0;
       }
-      
+
       button.slider__btn-next img {
         transform: rotate(180deg);
       }
@@ -327,6 +449,10 @@ h2.title {
         bottom: 0;
         z-index: 1;
         transform: translateX(-50%);
+
+        @media (min-width: $breakpoint-desktop) {
+          display: none;
+        }
       }
 
       .slider__indicator {
@@ -379,9 +505,12 @@ footer {
   background-color: #f4f4f4;
   text-align: center;
   .footer-one {
-    font-size: 20px;
-    padding: 36px 12px;
-    line-height: 28px;
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      padding: 36px 12px;
+      line-height: 28px;
+    }
   }
   .footer-two {
     background-color: #260591;

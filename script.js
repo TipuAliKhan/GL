@@ -1,3 +1,25 @@
+// intersection observer
+
+function handler(entries, observer) {
+    for (entry of entries) {
+        console.log(entry);
+
+        // statusText.textContent = entry.isIntersecting;
+
+        if (entry.isIntersecting) {
+            console.log("yes");
+
+            document.getElementsByTagName('footer')[0].style.position = 'relative';
+        } else {
+            document.getElementsByTagName('footer')[0].style.position = 'fixed';
+            document.getElementsByTagName('footer')[0].style.bottom = '0';
+        }
+    }
+}
+let observer = new IntersectionObserver(handler);
+observer.observe(document.getElementById("hero"));
+
+
 // accordion
 const accordions = document.querySelectorAll(".accordion");
 for (const accordion of accordions) {
@@ -100,7 +122,7 @@ function fillFormFormLocalStorage() {
     document.querySelector('#gl-start-now input[name="phone"]').value = data.phone;
     document.querySelector('#gl-start-now input[name="experience"]').value = data.experience
     document.querySelector(`#gl-start-now option[value="${data.organisation}"]`).selected = true;
-    if(data.authorize){
+    if (data.authorize) {
         document.querySelector('#gl-start-now input[name="authorize"]').checked = true
     }
 }

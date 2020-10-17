@@ -11,6 +11,11 @@
   border: none;
 }
 
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
 h2.title {
   margin: 0 30px 40px;
   text-align: center;
@@ -37,6 +42,16 @@ h2.title::after {
   h2.title {
     font-size: 34px;
     line-height: 48px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media (min-width: 426px) {
+  .container {
+    max-width: 80%;
   }
 }
 
@@ -72,6 +87,28 @@ h2.title::after {
   padding: 40px 0 20px;
 }
 
+@media (min-width: 700px) {
+  #hero .banner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (min-width: 700px) {
+  #hero .banner .content {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 #hero .banner .content h1 {
   color: #ffffff;
   font-size: 24px;
@@ -101,10 +138,24 @@ h2.title::after {
   padding-bottom: 40px;
 }
 
+@media (min-width: 700px) {
+  #hero .banner .form {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 #hero .banner .form form {
   background-color: #ffffff;
   border-radius: 8px;
-  padding: 16px;
+  padding: 14px;
+}
+
+@media (min-width: 700px) {
+  #hero .banner .form form {
+    width: 310px;
+  }
 }
 
 #hero .banner .form form h2 {
@@ -157,6 +208,16 @@ h2.title::after {
 
 #hero .banner .form form .checkbox {
   margin-bottom: 10px;
+  position: relative;
+  height: 40px;
+}
+
+#hero .banner .form form .checkbox label {
+  position: absolute;
+  left: 22px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 #hero .banner .form form button {
@@ -177,8 +238,78 @@ h2.title::after {
 
 #video iframe {
   width: 100%;
-  height: auto;
+  height: 250px;
   margin-top: 28px;
+}
+
+@media (min-width: 500px) {
+  #video iframe {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  #video iframe {
+    width: 600px;
+    height: 340px;
+  }
+}
+
+#video .icon {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 40px auto 0;
+  max-width: 1200px;
+}
+
+@media (min-width: 768px) {
+  #video .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#video .icon .list .icon-list {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#video .icon .list .icon-list img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#video .icon .list p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#video .icon .list .curriculum {
+  background-color: #f7d354;
+}
+
+#video .icon .list .mentorship {
+  background-color: #42c5f1;
+}
+
+#video .icon .list .assistance {
+  background-color: #3bab8e;
 }
 
 #curriculum {
@@ -193,8 +324,7 @@ h2.title::after {
 }
 
 #curriculum .accordion .accordion-panel {
-  margin: 2px;
-  padding: 5px;
+  padding: 10px;
   border-bottom: 1px solid #c2c5cb;
 }
 
@@ -240,8 +370,22 @@ h2.title::after {
 
 #outcome p {
   margin: 40px 0 20px;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  #outcome .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 #outcome .content .img img {
@@ -262,12 +406,14 @@ h2.title::after {
 
 #testimonial {
   padding: 60px 20px;
+  padding-bottom: 180px;
 }
 
 #testimonial .testimonial-list {
   position: relative;
   width: 100%;
   height: 250px;
+  margin-top: 60px;
 }
 
 #testimonial .testimonial-list .slider {
@@ -282,12 +428,6 @@ h2.title::after {
           transform: translate(-50%, -50%);
 }
 
-@media (min-width: 700px) {
-  #testimonial .testimonial-list .slider {
-    width: 50%;
-  }
-}
-
 #testimonial .testimonial-list .slider .slider__slide {
   display: none;
 }
@@ -298,10 +438,24 @@ h2.title::after {
   padding-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  #testimonial .testimonial-list .slider .slider__slide p {
+    width: 90%;
+    padding-left: 60px;
+  }
+}
+
 #testimonial .testimonial-list .slider .slider__slide h5 {
   font-size: 16px;
   font-weight: 600;
   line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  #testimonial .testimonial-list .slider .slider__slide h5 {
+    text-align: right;
+    padding-right: 60px;
+  }
 }
 
 #testimonial .testimonial-list .slider .slider__slide--active {
@@ -319,20 +473,29 @@ h2.title::after {
   display: none;
 }
 
-@media (min-width: 426px) {
+@media (min-width: 768px) {
   #testimonial .testimonial-list .slider .slider__btn-prev,
   #testimonial .testimonial-list .slider .slider__btn-next {
     display: inline-block;
     position: absolute;
     top: 50%;
     z-index: 1;
-    width: 100px;
+    width: 40px;
     height: 100px;
     border: none;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
     background-color: transparent;
+    cursor: pointer;
   }
+}
+
+#testimonial .testimonial-list .slider .slider__btn-prev img,
+#testimonial .testimonial-list .slider .slider__btn-next img {
+  width: 30px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 #testimonial .testimonial-list .slider .slider__btn-prev {
@@ -355,6 +518,12 @@ h2.title::after {
   z-index: 1;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  #testimonial .testimonial-list .slider .slider__indicator-box {
+    display: none;
+  }
 }
 
 #testimonial .testimonial-list .slider .slider__indicator {
@@ -412,8 +581,9 @@ footer {
   text-align: center;
 }
 
-footer .footer-one {
-  font-size: 20px;
+footer .footer-one p {
+  font-size: 16px;
+  font-weight: 400;
   padding: 36px 12px;
   line-height: 28px;
 }
