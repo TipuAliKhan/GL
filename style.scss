@@ -10,6 +10,9 @@ $font-family: "Fira Sans", sans-serif;
   font-family: sans-serif;
   color: $black;
   font-family: $font-family;
+  &:focus{
+    border: none;
+  }
 }
 h2.title {
   margin: 0 30px 40px;
@@ -94,7 +97,29 @@ h2.title {
         padding: 16px;
 
         h2 {
+          margin: 0 30px 40px;
           text-align: center;
+          color: #1b1c1d;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 34px;
+          position: relative;
+        
+          &::after {
+            content: "";
+            background-color: #1b1c1d;
+            width: 50%;
+            height: 2px;
+            position: absolute;
+            bottom: -40%;
+            left: 50%;
+            transform: translate(-50%, 0);
+          }
+        
+          @media (min-width: $breakpoint-tablet) {
+            font-size: 34px;
+            line-height: 48px;
+          }
         }
 
         .form-group {
@@ -255,7 +280,7 @@ h2.title {
         h5{
             font-size: 16px;
             font-weight: 600;
-    line-height: 26px;
+            line-height: 26px;
         }
       }
 
@@ -290,7 +315,10 @@ h2.title {
 
       .slider__btn-next {
         right: 0;
-        transform: rotate(90);
+      }
+      
+      button.slider__btn-next img {
+        transform: rotate(180deg);
       }
 
       .slider__indicator-box {
@@ -371,6 +399,7 @@ footer {
       font-size: 16px;
       color: #260591;
       cursor: pointer;
+      border-radius: 4px;
     }
   }
 }

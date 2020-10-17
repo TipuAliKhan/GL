@@ -1,87 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Great Learing</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <section id="hero">
-      <header>
-        <img class="logo" src="./GL-task-assets/gl-logo-white.png" alt="GL" />
-      </header>
-      <div class="banner">
-        <div class="form">
-          <form>
-            <h2>Get Started Now</h2>
-            <div class="form-group">
-              <input type="text" name="name" id="name" placeholder="Name" />
-              <label for="name"></label>
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" id="email" placeholder="Email" />
-              <label for="email"></label>
-            </div>
-            <div class="form-group">
-              <input
-                type="tel"
-                name="mobile"
-                id="mobile"
-                placeholder="Mobile No."
-              />
-              <label for="mobile"></label>
-            </div>
-            <div class="form-group">
-              <input
-                type="text"
-                name=""
-                id="experience"
-                placeholder="Work Experience"
-              />
-              <label for="experience"></label>
-            </div>
-            <div class="form-group">
-              <select id="organization">
-                <option value="">Current Organization</option>
-                <option value="">Organization 1</option>
-                <option value="">Organization 2</option>
-                <option value="">Organization 3</option>
-                <option value="">Organization 4</option>
-                <option value="">Organization 5</option>
-                <option value="">Organization 6</option>
-                <option value="">Organization 7</option>
-              </select>
-            </div>
-            <div class="checkbox">
-              <label for="authorize">
-                <input type="checkbox" name="authorize" id="authorize" />
-                I authorize a Great Learning representative to contact me
-              </label>
-            </div>
-            <button>Apply Now</button>
-          </form>
-        </div>
-        <div class="content">
-          <h1>
-            PG Program in <br />
-            Data Science and Business Analytics
-          </h1>
-          <p>
-            Learn Data Science, Business Analytics with India's #1 course and
-            power ahead in your career
-          </p>
-          <h2>11 Months</h2>
-          <h2>Online Mentorship</h2>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Great Learing</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <section id="hero">
+    <header>
+      <img class="logo" src="./GL-task-assets/gl-logo-white.png" alt="GL" />
+    </header>
+    <div class="banner">
+      <div class="form">
+        <form id="gl-start-now">
+          <h2>Get Started Now</h2>
+          <div class="form-group">
+            <input type="text" name="name" id="name" placeholder="Name" required/>
+            <label for="name"></label>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="email" placeholder="Email" required/>
+            <label for="email"></label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="phone" id="phone" placeholder="Mobile No." required/>
+            <label for="phone"></label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="experience" id="experience" placeholder="Work Experience" required/>
+            <label for="experience"></label>
+          </div>
+          <div class="form-group">
+            <select id="organization">
+              <option value="*">Current Organization</option>
+              <option value="1">Organization 1</option>
+              <option value="2">Organization 2</option>
+              <option value="3">Organization 3</option>
+              <option value="4">Organization 4</option>
+              <option value="5">Organization 5</option>
+              <option value="6">Organization 6</option>
+              <option value="7">Organization 7</option>
+            </select>
+            <label for="organization"></label>
+          </div>
+          <div class="checkbox">
+            <label for="authorize">
+              <input type="checkbox" name="authorize" id="authorize" />
+              I authorize a Great Learning representative to contact me
+            </label>
+          </div>
+          <button id="submit-form">Apply Now</button>
+        </form>
       </div>
-    </section>
-    <section id="video">
+      <div class="content">
+        <h1>
+          PG Program in <br />
+          Data Science and Business Analytics
+        </h1>
+        <p>
+          Learn Data Science, Business Analytics with India's #1 course and
+          power ahead in your career
+        </p>
+        <h2>11 Months</h2>
+        <h2>Online Mentorship</h2>
+      </div>
+    </div>
+  </section>
+  <!-- <section id="video">
       <h2 class="title">WHY LEARN FROM GREAT LEARNING</h2>
       <iframe
         src="https://www.youtube.com/embed/c64BuiED4Mg"
@@ -89,178 +79,172 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
-    </section>
-    <section id="curriculum">
-      <h2 class="title">CURRICULUM SNAPSHOT</h2>
-      <div class="accordion">
-        <div class="accordion-panel">
-          <h3 class="accordion-header">Introduction to Data Science</h3>
-          <p class="accordion-body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Praesentium doloribus ullam odio quam dolor deleniti.
-          </p>
-        </div>
-        <div class="accordion-panel">
-          <h3 class="accordion-header">Business Finance</h3>
-          <p class="accordion-body">These are the contents of panel 2</p>
-        </div>
-        <div class="accordion-panel">
-          <h3 class="accordion-header">Marketing and CRM</h3>
-          <p class="accordion-body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum aut
-            quis reprehenderit hic doloremque laborum? Explicabo ratione cum rem
-            ullam est esse nostrum fugit.
-          </p>
-        </div>
-
-        <div class="accordion-panel">
-          <h3 class="accordion-header">SQL Programing</h3>
-          <p class="accordion-body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
-            commodi hic quis maxime odit.
-          </p>
-        </div>
-
-        <div class="accordion-panel">
-          <h3 class="accordion-header">Advance Statistic</h3>
-          <p class="accordion-body">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut
-            aliquam praesentium, quae amet debitis quam porro quisquam quia vel
-            veniam ea, architecto eveniet natus delectus iste harum neque ipsa
-            nobis?
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="outcome">
-      <h2 class="title">LEARNING OUTCOME</h2>
-      <p>
-        Acquire a design thinking mindset, so that you can translate your
-        learnings during the course to drive innovation in your company
-      </p>
-      <div class="content">
-        <div class="img">
-          <img src="./GL-task-assets/laptop.png" alt="laptop" />
-        </div>
-        <div class="data">
-          <ul>
-            <li>
-              Develop viable solutions to user challenges using the design
-              thinking and hypotheses-driven innovation processes
-            </li>
-            <li>
-              Gain user empathy through observation and interviewing, and
-              develop user insights to identify unmet needs
-            </li>
-            <li>
-              Use multiple brainstorming techniques to find innovative solutions
-            </li>
-            <li>Prototype a solution to a user challenge</li>
-            <li>
-              Develop and test a business model or business case to support the
-              viability of the solution
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section id="testimonial">
-      <h2 class="title">Testimonial</h2>
-      <div class="testimonial-list">
-        <div class="slider">
-          <div class="slider__slide slider__slide--active">
-            <p>
-              <span class="quote">"</span>Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Possimus rem dolores repudiandae
-              distinctio?<span class="quote">"</span>
-            </p>
-            <h5>
-              - Senior Director, Business Development <br />
-              (Software Industry)
-            </h5>
-          </div>
-          <div class="slider__slide">
-            <p>
-              <span class="quote">"</span> Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. quam placeat quisquam blanditiis ut
-              fugit fugiat officiis, repudiandae distinctio?<span class="quote"
-                >"</span
-              >
-            </p>
-            <h5>
-              Junior Director, Business Development <br />
-              (Software Industry)
-            </h5>
-          </div>
-          <div class="slider__slide">
-            <p>
-              <span class="quote">"</span> Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Possimus rem dolores, ad nemo animi
-              iste rerum exercitationem nulla natus corporis,repudiandae
-              distinctio?<span class="quote">"</span>
-            </p>
-            <h5>
-              Senior Director, Business Development <br />
-              (Food Industry)
-            </h5>
-          </div>
-          <div class="slider__slide">
-            <p>
-              <span class="quote">"</span> Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. quam placeat quisquam blanditiis ut
-              fugit fugiat officiis, repudiandae distinctio?<span class="quote"
-                >"</span
-              >
-            </p>
-            <h5>
-              Junior Director, Business Development <br />
-              (Software Industry)
-            </h5>
-          </div>
-
-          <button class="slider__btn-prev" type="button">
-            <img src="./GL-task-assets/arrow.png" alt="Prev" />
-          </button>
-          <button class="slider__btn-next" type="button">
-            <img src="./GL-task-assets/arrow.png" alt="Prev" />
-          </button>
-
-          <div class="slider__indicator-box">
-            <button
-              class="slider__indicator slider__indicator--active"
-              type="button"
-            >
-              <span class="sr-only">Slide to 1</span>
-            </button>
-            <button class="slider__indicator" type="button">
-              <span class="sr-only">Slide to 2</span>
-            </button>
-            <button class="slider__indicator" type="button">
-              <span class="sr-only">Slide to 3</span>
-            </button>
-            <button class="slider__indicator" type="button">
-                <span class="sr-only">Slide to 4</span>
-              </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <div class="footer-one">
-        <p>
-          Great Learning is an Ed-Tech company that ofers programs in career
-          critical competencies such as Analytics, Data Science, Artifical
-          Intelligence, Cloud Computing, Cybersecurity, Full Stack Development
-          and much more. Over 10000 professionals have taken Great Learning
-          programs and it has already delivered over 5 million hours of
-          learning.
+    </section> -->
+  <section id="curriculum">
+    <h2 class="title">CURRICULUM SNAPSHOT</h2>
+    <div class="accordion">
+      <div class="accordion-panel">
+        <h3 class="accordion-header">Introduction to Data Science</h3>
+        <p class="accordion-body">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Praesentium doloribus ullam odio quam dolor deleniti.
         </p>
       </div>
-      <div class="footer-two">
-        <p>Explore this game changing opportunity</p>
-        <button>Apply Now</button>
+      <div class="accordion-panel">
+        <h3 class="accordion-header">Business Finance</h3>
+        <p class="accordion-body">These are the contents of panel 2</p>
       </div>
-    </footer>
-    <script src="./script.js"></script>
-  </body>
+      <div class="accordion-panel">
+        <h3 class="accordion-header">Marketing and CRM</h3>
+        <p class="accordion-body">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum aut
+          quis reprehenderit hic doloremque laborum? Explicabo ratione cum rem
+          ullam est esse nostrum fugit.
+        </p>
+      </div>
+
+      <div class="accordion-panel">
+        <h3 class="accordion-header">SQL Programing</h3>
+        <p class="accordion-body">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
+          commodi hic quis maxime odit.
+        </p>
+      </div>
+
+      <div class="accordion-panel">
+        <h3 class="accordion-header">Advance Statistic</h3>
+        <p class="accordion-body">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut
+          aliquam praesentium, quae amet debitis quam porro quisquam quia vel
+          veniam ea, architecto eveniet natus delectus iste harum neque ipsa
+          nobis?
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="outcome">
+    <h2 class="title">LEARNING OUTCOME</h2>
+    <p>
+      Acquire a design thinking mindset, so that you can translate your
+      learnings during the course to drive innovation in your company
+    </p>
+    <div class="content">
+      <div class="img">
+        <img src="./GL-task-assets/laptop.png" alt="laptop" />
+      </div>
+      <div class="data">
+        <ul>
+          <li>
+            Develop viable solutions to user challenges using the design
+            thinking and hypotheses-driven innovation processes
+          </li>
+          <li>
+            Gain user empathy through observation and interviewing, and
+            develop user insights to identify unmet needs
+          </li>
+          <li>
+            Use multiple brainstorming techniques to find innovative solutions
+          </li>
+          <li>Prototype a solution to a user challenge</li>
+          <li>
+            Develop and test a business model or business case to support the
+            viability of the solution
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="testimonial">
+    <h2 class="title">Testimonial</h2>
+    <div class="testimonial-list">
+      <div class="slider">
+        <div class="slider__slide slider__slide--active">
+          <p>
+            <span class="quote">"</span>Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Possimus rem dolores repudiandae
+            distinctio?<span class="quote">"</span>
+          </p>
+          <h5>
+            - Senior Director, Business Development <br />
+            (Software Industry)
+          </h5>
+        </div>
+        <div class="slider__slide">
+          <p>
+            <span class="quote">"</span> Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. quam placeat quisquam blanditiis ut
+            fugit fugiat officiis, repudiandae distinctio?<span class="quote">"</span>
+          </p>
+          <h5>
+            Junior Director, Business Development <br />
+            (Software Industry)
+          </h5>
+        </div>
+        <div class="slider__slide">
+          <p>
+            <span class="quote">"</span> Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Possimus rem dolores, ad nemo animi
+            iste rerum exercitationem nulla natus corporis,repudiandae
+            distinctio?<span class="quote">"</span>
+          </p>
+          <h5>
+            Senior Director, Business Development <br />
+            (Food Industry)
+          </h5>
+        </div>
+        <div class="slider__slide">
+          <p>
+            <span class="quote">"</span> Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. quam placeat quisquam blanditiis ut
+            fugit fugiat officiis, repudiandae distinctio?<span class="quote">"</span>
+          </p>
+          <h5>
+            Junior Director, Business Development <br />
+            (Software Industry)
+          </h5>
+        </div>
+
+        <button class="slider__btn-prev" type="button">
+          <img src="./GL-task-assets/arrow.png" alt="Prev" />
+        </button>
+        <button class="slider__btn-next" type="button">
+          <img src="./GL-task-assets/arrow.png" alt="Prev" />
+        </button>
+
+        <div class="slider__indicator-box">
+          <button class="slider__indicator slider__indicator--active" type="button">
+            <span class="sr-only">Slide to 1</span>
+          </button>
+          <button class="slider__indicator" type="button">
+            <span class="sr-only">Slide to 2</span>
+          </button>
+          <button class="slider__indicator" type="button">
+            <span class="sr-only">Slide to 3</span>
+          </button>
+          <button class="slider__indicator" type="button">
+            <span class="sr-only">Slide to 4</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-one">
+      <p>
+        Great Learning is an Ed-Tech company that ofers programs in career
+        critical competencies such as Analytics, Data Science, Artifical
+        Intelligence, Cloud Computing, Cybersecurity, Full Stack Development
+        and much more. Over 10000 professionals have taken Great Learning
+        programs and it has already delivered over 5 million hours of
+        learning.
+      </p>
+    </div>
+    <div class="footer-two">
+      <p>Explore this game changing opportunity</p>
+      <button id="move-to-top">Apply Now</button>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+
 </html>

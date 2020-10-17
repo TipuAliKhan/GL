@@ -7,6 +7,10 @@
   font-family: "Fira Sans", sans-serif;
 }
 
+*:focus {
+  border: none;
+}
+
 h2.title {
   margin: 0 30px 40px;
   text-align: center;
@@ -104,7 +108,32 @@ h2.title::after {
 }
 
 #hero .banner .form form h2 {
+  margin: 0 30px 40px;
   text-align: center;
+  color: #1b1c1d;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  position: relative;
+}
+
+#hero .banner .form form h2::after {
+  content: "";
+  background-color: #1b1c1d;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+@media (min-width: 426px) {
+  #hero .banner .form form h2 {
+    font-size: 34px;
+    line-height: 48px;
+  }
 }
 
 #hero .banner .form form .form-group {
@@ -312,8 +341,11 @@ h2.title::after {
 
 #testimonial .testimonial-list .slider .slider__btn-next {
   right: 0;
-  -webkit-transform: rotate(90);
-          transform: rotate(90);
+}
+
+#testimonial .testimonial-list .slider button.slider__btn-next img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 #testimonial .testimonial-list .slider .slider__indicator-box {
@@ -408,5 +440,6 @@ footer .footer-two button {
   font-size: 16px;
   color: #260591;
   cursor: pointer;
+  border-radius: 4px;
 }
 /*# sourceMappingURL=style.css.map */
