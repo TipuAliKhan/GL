@@ -336,6 +336,10 @@ h2.title {
         width: 100%;
         height: auto;
       }
+
+    @media (min-width: $breakpoint-desktop) {
+      order: 2;
+    }
     }
     .data {
       ul {
@@ -348,6 +352,10 @@ h2.title {
           padding-bottom: 20px;
         }
       }
+
+    @media (min-width: $breakpoint-desktop) {
+      order: 1;
+    }
     }
   }
 }
