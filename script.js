@@ -17,7 +17,7 @@ function handler(entries, observer) {
     }
 }
 let observer = new IntersectionObserver(handler);
-observer.observe(document.getElementById("hero"));
+observer.observe(document.getElementById("gl-start-now"));
 
 
 // accordion
